@@ -6,10 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/showyouhappiness/Vue-gulu.git"
-  },
+  "repository": "git+https://github.com/showyouhappiness/Vue-gulu.git",
   "keywords": [
     "vue",
     "ui"
@@ -21,9 +18,15 @@
   },
   "homepage": "https://github.com/showyouhappiness/Vue-gulu#readme",
   "dependencies": {
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "node-sass": "^5.0.0",
+    "parcel-bundler": "^1.12.4",
+    "sass-loader": "^10.0.5"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }
