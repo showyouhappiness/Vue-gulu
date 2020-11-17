@@ -18,7 +18,7 @@ export default {
       default: "left",
       validator(value) {
         console.log(value);
-        return value === "left" || value === "right"; 
+        return value === "left" || value === "right";
       },
     },
   },
