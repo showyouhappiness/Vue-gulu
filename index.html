@@ -15,11 +15,11 @@
     }
 
     :root {
-        --button-height: 32px;
-        --font-size: 14px;
+        --button-height: 2em;
+        --font-size: 1em;
         --button-bg: white;
         --button-active-bg: #ccc;
-        --border-radius: 4px;
+        --border-radius: .25em;
         --color: #333;
         --border-color: #999;
         --border-color-hover: #666;
@@ -29,12 +29,27 @@
         font-size: var(--font-size);
     }
 </style>
+<style>
+    .icon {
+        width: 1em;
+        height: 1em;
+    }
+</style>
 
 <body>
     <div id="app">
-        <g-button></g-button>
+        <g-button>
+            按钮
+        </g-button>
+        <g-button icon="settings">
+            按钮
+        </g-button>
+        <g-button icon="settings" icon-position="right">
+            按钮
+        </g-button>
     </div>
     <script src="./src/app.js"></script>
+    <script src="//at.alicdn.com/t/font_2209937_7gqvuetnkcg.js"></script>
 </body>
 
 </html>
