@@ -1,7 +1,7 @@
 <template>
-  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }">
+  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
     <g-icon :name="icon" class="icon" v-if="icon && !loading"></g-icon>
-    <g-icon v-if="loading" class="loading" name="loading"></g-icon>
+    <g-icon v-if="loading" class="loading icon" name="loading"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
