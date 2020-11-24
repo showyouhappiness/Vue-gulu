@@ -21,6 +21,7 @@ import spies from 'chai-spies';
 chai.use(spies)
 const expect = chai.expect
 {
+    //测试按钮还有icon
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
