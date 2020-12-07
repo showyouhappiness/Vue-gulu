@@ -1,5 +1,9 @@
 <template>
-  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
+  <button
+    class="g-button"
+    :class="{ [`icon-${iconPosition}`]: true }"
+    @click="$emit('click')"
+  >
     <g-icon :name="icon" class="icon" v-if="icon && !loading"></g-icon>
     <g-icon v-if="loading" class="loading icon" name="loading"></g-icon>
     <div class="content">
@@ -8,14 +12,19 @@
   </button>
 </template>
 <script>
-// import Icon from "./icon";
+import Vue from 'vue'
+import Icon from "./icon"
+Vue.component('g-icon',Icon)
 export default {
   // props: ["icon", "iconPosition"],
+  components: {
+    "g-icon": Icon,
+  },
   props: {
     icon: {},
     loading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     iconPosition: {
       type: String,
@@ -28,15 +37,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
 
-        100% {
-            transform: rotate(360deg);
-        }
-    }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .g-button {
   height: var(--button-height);
   font-size: var(--font-size);
@@ -80,8 +89,8 @@ export default {
       order: 1;
     }
   }
-    .loading {
-        animation: spin 2s infinite linear;
-    }
+  .loading {
+    animation: spin 2s infinite linear;
+  }
 }
 </style>
