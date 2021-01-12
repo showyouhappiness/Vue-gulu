@@ -14,6 +14,7 @@
 <script>
 import Icon from "./icon";
 export default {
+  name: "GuluButton",
   // props: ["icon", "iconPosition"],
   components: {
     "g-icon": Icon,
