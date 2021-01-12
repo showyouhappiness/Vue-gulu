@@ -20,6 +20,7 @@
   "homepage": "https://github.com/showyouhappiness/Vue-gulu#readme",
   "dependencies": {
     "vue": "^2.6.12",
+    "vue-gulu-lyj": "^0.0.1",
     "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {

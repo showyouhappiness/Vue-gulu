@@ -1,5 +1,5 @@
 # 这是一个 Vue ui 库
-
+[![Build Status](https://travis-ci.org/showyouhappiness/Vue-gulu.svg?branch=master)](https://travis-ci.org/showyouhappiness/Vue-gulu)
 作者： 李勇军
 
 ##介绍
@@ -19,3 +19,5 @@
 ##变更记录
 
 ##联系方式
+
+##贡献代码

@@ -6893,6 +6893,14 @@ void-elements@^2.0.0:
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
 
+vue-gulu-lyj@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/vue-gulu-lyj/-/vue-gulu-lyj-0.0.1.tgz#27a9f9b53676b5042f346f0bb57af99f1a4d6c17"
+  integrity sha512-fjkehJgMG1becm6ucFpPUiUvQUTvoQ5i8bcZmWb6mOA2ezi9kryxsk45Jfrughuie2sO6Z/r2wk8A2uP5eq/Qg==
+  dependencies:
+    vue "^2.6.12"
+    vue-hot-reload-api "^2.3.4"
+
 vue-hot-reload-api@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
