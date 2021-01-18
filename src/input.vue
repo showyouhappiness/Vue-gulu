@@ -5,9 +5,9 @@
       :disabled="disabled"
       :readonly="readonly"
       @change="$emit('change',$event)"
-      @input="$emit('change',$event)"
-      @focus="$emit('change',$event)"
-      @blur="$emit('change',$event)"
+      @input="$emit('input',$event)"
+      @focus="$emit('focus',$event)"
+      @blur="$emit('blur',$event)"
       type="text"
     />
     <!-- input本身是有一个change事件的 改变时会给一个对象 这个对象在Vue中通过$event表示 这个是浏览器原生触发的change事件 -->
