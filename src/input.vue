@@ -4,8 +4,13 @@
       :value="value"
       :disabled="disabled"
       :readonly="readonly"
+      @change="$emit('change',$event)"
+      @input="$emit('change',$event)"
+      @focus="$emit('change',$event)"
+      @blur="$emit('change',$event)"
       type="text"
     />
+    <!-- input本身是有一个change事件的 改变时会给一个对象 这个对象在Vue中通过$event表示 这个是浏览器原生触发的change事件 -->
     <!-- 我想在这里加一个v-if但是我不想在这里加一个div所以可以使用template -->
     <template v-if="error">
       <icon name="error" class="icon-error"></icon>
