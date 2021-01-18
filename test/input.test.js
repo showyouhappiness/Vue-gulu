@@ -70,28 +70,30 @@ describe('Input', () => {
         afterEach(() => {
             vm.$destroy()
         })
-        it('支持 change 事件', () => {
-            vm = new Constructor({}).$mount()
-            const callback = sinon.fake();
-            vm.$on('change', callback)
+        // it('支持 change 事件', () => {
+        //     vm = new Constructor({}).$mount()
+        //     const callback = sinon.fake();
+        //     vm.$on('change', callback)
+        //     //触发input的change事件
+        //     vm.$el.click()
+        //     let event = new Event('change')
+        //     const inputElement = vm.$el.querySelector('input')
+        //     inputElement.dispatchEvent(event)
+        //     expect(callback).to.have.been.calledWith(event)
+        // })
+        // 这四个一样 所有就封装成下面这个
+        it('支持 change/input/focus/blur 事件', () => {
+            ['change','input','focus','blur'].forEach((eventName)=>{
+                vm = new Constructor({}).$mount()
+                const callback = sinon.fake();
+                vm.$on(eventName,callback)
+                vm.$el.click()
+                let event = new Event(eventName)
+                const inputElement = vm.$el.querySelector('input')
+                inputElement.dispatchEvent(event)
+                expect(callback).to.have.been.calledWith(event)
+            })
             //触发input的change事件
-            vm.$el.click()
-            let event = new Event('change')
-            const inputElement = vm.$el.querySelector('input')
-            inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event)
-        })
-        // 其他三个一样 input  focus  blur 所以就有下面的
-        it('支持 change 事件', () => {
-            vm = new Constructor({}).$mount()
-            const callback = sinon.fake();
-            vm.$on('change', callback)
-            //触发input的change事件
-            vm.$el.click()
-            let event = new Event('change')
-            const inputElement = vm.$el.querySelector('input')
-            inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event)
         })
     })
 })
