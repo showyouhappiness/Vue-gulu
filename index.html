@@ -62,6 +62,11 @@
         <div class="box">
             <g-input value="王" @change="inputChange"></g-input>
             <g-input value="王" error="姓名不能少于两个字"></g-input>
+
+            <g-input v-model="message"></g-input>
+            <p>{{message}}</p>
+            <button @click="message += 1">+1</button>
+            <input type="text" :value="message" @input="message = $event.target.value">
         </div>
     </div>
     <script src="./src/app.js"></script>

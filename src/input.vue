@@ -4,10 +4,10 @@
       :value="value"
       :disabled="disabled"
       :readonly="readonly"
-      @change="$emit('change',$event)"
-      @input="$emit('input',$event)"
-      @focus="$emit('focus',$event)"
-      @blur="$emit('blur',$event)"
+      @change="$emit('change',$event.target.value)"
+      @input="$emit('input',$event.target.value)"
+      @focus="$emit('focus',$event.target.value)"
+      @blur="$emit('blur',$event.target.value)"
       type="text"
     />
     <!-- input本身是有一个change事件的 改变时会给一个对象 这个对象在Vue中通过$event表示 这个是浏览器原生触发的change事件 -->

@@ -7,7 +7,8 @@ Vue.config.devtools = false
 
 describe('Input', () => {
     it('存在.', () => {
-        expect(Input).to.be.ok
+        // expect(Input).to.be.ok
+        expect(Input).to.not.exist
     })
     describe('props', () => {
         const Constructor = Vue.extend(Input)
@@ -87,11 +88,16 @@ describe('Input', () => {
                 vm = new Constructor({}).$mount()
                 const callback = sinon.fake();
                 vm.$on(eventName,callback)
-                vm.$el.click()
+                // 触发input的change事件
                 let event = new Event(eventName)
+                object.defineProperty(
+                    event,'target',{
+                        value: {value: 'hi'}, enumerable: true
+                    }
+                )
                 const inputElement = vm.$el.querySelector('input')
                 inputElement.dispatchEvent(event)
-                expect(callback).to.have.been.calledWith(event)
+                expect(callback).to.have.been.calledWith('hi')
             })
             //触发input的change事件
         })
