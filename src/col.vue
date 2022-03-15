@@ -1,6 +1,6 @@
 <template>
   <div class="col" :class="colClass" :style="colStyle">
-    <div style="border: 1px solid green; height: 100px;">
+    <div style="border: 1px solid green;">
       <slot></slot>
     </div>
   </div>
@@ -44,10 +44,6 @@ export default {
 
 <style scoped lang="scss">
   .col {
-    height: 100px;
-    width: 50%;
-    padding: 0 10px;
-
     $class-prefix: col-;
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n}{
