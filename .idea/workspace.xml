@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="Default Changelist">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="col代码的重构&#10;完成row和col的测试">
+      <change afterPath="$PROJECT_DIR$/test/col.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/row.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/col.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/row.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/row.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -51,31 +55,79 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="npm.dev-test">
-    <configuration name="dev-test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev-test" />
-      </scripts>
+  <component name="RunManager" selected="Karma.Row.接受gutter属性">
+    <configuration name="Button.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/test/button.test.js" />
+      <test-names>
+        <test-name value="Button" />
+        <test-name value="存在." />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
+    <configuration name="Row" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
+      <scope-kind value="SUITE" />
+      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
+      <test-names>
+        <test-name value="Row" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Row.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
+      <test-names>
+        <test-name value="Row" />
+        <test-name value="存在." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Row.接受gutter属性" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
+      <test-names>
+        <test-name value="Row" />
+        <test-name value="接受gutter属性" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="row.test.js" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test" />
-        <item itemvalue="npm.dev-test" />
+        <item itemvalue="Karma.Row.接受gutter属性" />
+        <item itemvalue="Karma.Row.存在." />
+        <item itemvalue="Karma.Button.存在." />
+        <item itemvalue="Karma.row.test.js" />
+        <item itemvalue="Karma.Row" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +161,7 @@
       <workItem from="1646914706521" duration="5081000" />
       <workItem from="1647221949996" duration="4664000" />
       <workItem from="1647230495887" duration="5586000" />
+      <workItem from="1647487475194" duration="2196000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -136,7 +189,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="input add v-model" />
-    <option name="LAST_COMMIT_MESSAGE" value="input add v-model" />
+    <MESSAGE value="col代码的重构&#10;完成row和col的测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="col代码的重构&#10;完成row和col的测试" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
