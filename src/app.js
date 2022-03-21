@@ -37,10 +37,27 @@ new Vue({
         message: "hi"
     },
     created() {
+        this.$toast('I am message', {
+            closeButton: {
+                text: '知道了',
+                callback(toask) {
+                    toask.log()
+                    console.log('I know')
+                }
+            }
+        })
     },
     methods: {
         showToast() {
-            this.$toast('I am message')
+            this.$toast('I am message',{
+                closeButton: {
+                    text: '知道了',
+                    callback(toask) {
+                        toask.log()
+                        console.log('I know')
+                    }
+                }
+            })
         }
     },
 });
