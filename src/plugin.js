@@ -5,9 +5,7 @@ export default {
         Vue.prototype.$toast = function (message, toastOptions) {
             let Constructor = Vue.extend(Toast)
             let toast = new Constructor({
-                propsData: {
-                    closeButton: toastOptions.closeButton
-                }
+                propsData: toastOptions
             })
             toast.$slots.default = [message] // 把数据赋值给插槽的默认值
             toast.$mount()

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="update toast and plugin">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="实现调用方法，筛选是否回调">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.js" afterDir="false" />
@@ -162,7 +162,7 @@
       <workItem from="1647230495887" duration="5586000" />
       <workItem from="1647487475194" duration="11354000" />
       <workItem from="1647862796612" duration="2737000" />
-      <workItem from="1647865607901" duration="4335000" />
+      <workItem from="1647865607901" duration="5306000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647865440197</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="实现调用方法，筛选是否回调">
+      <created>1647870110414</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647870110414</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +221,8 @@
     <MESSAGE value="col代码的重构&#10;完成row和col的测试" />
     <MESSAGE value="layout header content sider footer 完成" />
     <MESSAGE value="update toast and plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="update toast and plugin" />
+    <MESSAGE value="实现调用方法，筛选是否回调" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现调用方法，筛选是否回调" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
