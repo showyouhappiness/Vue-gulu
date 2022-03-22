@@ -37,14 +37,21 @@ new Vue({
         message: "hi"
     },
     created() {
-        this.$toast("<p>段落<strong>hi</strong><a href='https://www.baidu.com'>百度</a></p>", {
-            position: 'middle',
-            enableHtml: false
-        })
     },
     methods: {
-        showToast() {
+        showToast1() {
+            this.showToast('top')
+        },
+        showToast2() {
+            this.showToast('middle')
+        },
+        showToast3() {
+            this.showToast('bottom')
+        },
+        showToast(position) {
             this.$toast('I am message', {
+                position,
+                enableHtml: false,
                 closeButton: {
                     text: '知道了',
                     callback(toask) {

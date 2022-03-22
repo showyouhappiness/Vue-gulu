@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="实现实现了只能有一个toast的功能">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="解决toast的一个bug 多次调用close()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/toast.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +163,7 @@
       <workItem from="1647487475194" duration="11354000" />
       <workItem from="1647862796612" duration="2737000" />
       <workItem from="1647865607901" duration="5504000" />
-      <workItem from="1647949200534" duration="3360000" />
+      <workItem from="1647949200534" duration="5080000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -220,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647952197026</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="解决toast的一个bug 多次调用close()">
+      <created>1647952707953</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647952707953</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +254,8 @@
     <MESSAGE value="实现可以传文本到组件内，此方法默认为不开启状态" />
     <MESSAGE value="实现弹出框 上 中 下 功能" />
     <MESSAGE value="实现实现了只能有一个toast的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现实现了只能有一个toast的功能" />
+    <MESSAGE value="解决toast的一个bug 多次调用close()" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决toast的一个bug 多次调用close()" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
