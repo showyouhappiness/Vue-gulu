@@ -1,5 +1,5 @@
 <template>
-  <div class="toast">
+  <div class="toast" :class="toastPosition">
     <slot v-if="!enableHtml"></slot>
     <div v-else v-html="$slots.default[0]"></div>
     <span class="close" v-if="closeButton" @click="onClickClose">
@@ -33,6 +33,13 @@ export default {
     enableHtml: {
       type: Boolean,
       default: false
+    },
+    position: {
+      type: String,
+      default: 'top',
+      validator(value) {
+        return ['top', 'middle', 'bottom'].indexOf(value) >= 0
+      }
     }
   },
   created() {
@@ -43,6 +50,14 @@ export default {
       setTimeout(() => {
         this.close()
       }, this.autoCloseDelay * 1000)
+    }
+  },
+  computed: {
+    toastPosition() {
+      return {
+        [`position-${this.position}`]: true
+      }
+
     }
   },
   methods: {
@@ -72,24 +87,39 @@ $toast-bg: rgba(0, 0, 0, .75);
 .toast {
   display: flex;
   font-size: $font-size;
-  height: $toast-height;
+  min-height: $toast-height;
   line-height: $line-height;
   position: fixed;
-  top: 0;
   left: 50%;
   color: white;
-  transform: translateX(-50%);
   border-radius: 4px;
   background: $toast-bg;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
   padding: 0 16px;
 
   > .close {
-    display: block;
+    display: flex;
+    align-items: center;
     border-left: 1px solid #666;
     cursor: pointer;
     margin-left: 16px;
     padding-left: 16px;
+    flex-shrink: 0;
+  }
+
+  &.position-top {
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  &.position-bottom {
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+
+  &.position-middle {
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>
