@@ -12,6 +12,19 @@ import Sider from "./sider";
 import Footer from "./footer";
 import Toast from "./toast";
 import plugin from "./plugin";
+import Tabs from "./tabs";
+import TabsHead from "./tabs-head";
+import TabsBody from "./tabs-body";
+import TabsItem from "./tabs-item";
+import TabsPane from "./tabs-pane";
+// import Popover from "./popover";
+// import Collapse from "./collapse";
+// import CollapseItem from "./collapse-item";
+// import Cascader from "./cascader";
+// import CascaderPanel from "./cascader-panel";
+// import Carousel from "./carousel";
+// import CarouselItem from "./carousel-item";
+// import BackTop from "./back-top";
 
 
 Vue.component('g-button', Button)
@@ -27,14 +40,23 @@ Vue.component('g-sider', Sider)
 Vue.component('g-footer', Footer)
 Vue.component('g-footer', Footer)
 Vue.component('g-toast', Toast)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-head', TabsHead)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-pane', TabsPane)
+
 Vue.use(plugin)
+
+
 new Vue({
     el: "#app",
     data: {
         loading1: false,
         loading2: true,
         loading3: false,
-        message: "hi"
+        message: "hi",
+        selectedTab: "设置",
     },
     created() {
     },

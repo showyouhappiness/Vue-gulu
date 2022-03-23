@@ -34,8 +34,8 @@ export default {
       gutter: 0
     }
   },
-  methods:{
-    createClasses (obj, str = ''){
+  methods: {
+    createClasses(obj, str = '') {
       if (!obj) return []
       let array = []
       if (obj.span) {

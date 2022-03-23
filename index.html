@@ -32,10 +32,21 @@
 
 <body>
 <div id="app">
-<!--    <button @click="showToast">测试</button>-->
-    <button @click="showToast1">top</button>
-    <button @click="showToast2">middle</button>
-    <button @click="showToast3">bottom</button>
+    <g-tabs :selected.sync="首页" direction="direction">
+        <g-tabs-head>
+            <template v-slot="actions">
+                <button>设置</button>
+            </template>
+            <g-tabs-item name="首页">首页</g-tabs-item>
+            <g-tabs-item name="消息">消息</g-tabs-item>
+            <g-tabs-item name="设置"><g-icon name="settings"></g-icon>设置</g-tabs-item>
+        </g-tabs-head>
+        <g-tabs-body>
+            <g-tabs-pane name="首页" icon="home" active>首页内容</g-tabs-pane>
+            <g-tabs-pane name="消息" icon="message" active>消息内容</g-tabs-pane>
+            <g-tabs-pane name="设置" icon="setting" active>设置内容</g-tabs-pane>
+        </g-tabs-body>
+    </g-tabs>
 </div>
 <script src="./src/app.js"></script>
 </body>

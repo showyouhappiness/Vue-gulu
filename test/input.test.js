@@ -7,8 +7,8 @@ Vue.config.devtools = false
 
 describe('Input', () => {
     it('存在.', () => {
-        // expect(Input).to.be.ok
-        expect(Input).to.not.exist
+        expect(Input).to.be.ok
+        // expect(Input).to.not.exist
     })
     describe('props', () => {
         const Constructor = Vue.extend(Input)

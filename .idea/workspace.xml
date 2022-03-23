@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="解决toast的一个bug 多次调用close()">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="弹出动画">
+      <change afterPath="$PROJECT_DIR$/src/tabs-body.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tabs-head.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tabs-item.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tabs-pane.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tabs.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/col.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/toast.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/col.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/col.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/input.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/input.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -48,85 +56,95 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindow拉取请求.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\l1477\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.7172.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Karma.Row.接受gutter属性">
-    <configuration name="Button.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
-      <working-directory value="$PROJECT_DIR$" />
-      <node-interpreter value="project" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/button.test.js" />
-      <test-names>
-        <test-name value="Button" />
-        <test-name value="存在." />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Row" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Karma.Input.事件">
+    <configuration name="Input" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
       <test-names>
-        <test-name value="Row" />
+        <test-name value="Input" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Row.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="Input.事件" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
+      <test-names>
+        <test-name value="Input" />
+        <test-name value="事件" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Input.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
       <test-names>
-        <test-name value="Row" />
+        <test-name value="Input" />
         <test-name value="存在." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Row.接受gutter属性" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="Input.props" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
+      <test-names>
+        <test-name value="Input" />
+        <test-name value="props" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Input.props.接收 value" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
       <test-names>
-        <test-name value="Row" />
-        <test-name value="接受gutter属性" />
+        <test-name value="Input" />
+        <test-name value="props" />
+        <test-name value="接收 value" />
       </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="row.test.js" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
-      <working-directory value="$PROJECT_DIR$" />
-      <node-interpreter value="project" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file-path value="$PROJECT_DIR$/test/row.test.js" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Karma.Row.接受gutter属性" />
-        <item itemvalue="Karma.Row.存在." />
-        <item itemvalue="Karma.Button.存在." />
-        <item itemvalue="Karma.row.test.js" />
-        <item itemvalue="Karma.Row" />
+        <item itemvalue="Karma.Input.事件" />
+        <item itemvalue="Karma.Input.props.接收 value" />
+        <item itemvalue="Karma.Input.props" />
+        <item itemvalue="Karma.Input" />
+        <item itemvalue="Karma.Input.存在." />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +181,9 @@
       <workItem from="1647487475194" duration="11354000" />
       <workItem from="1647862796612" duration="2737000" />
       <workItem from="1647865607901" duration="5504000" />
-      <workItem from="1647949200534" duration="5080000" />
+      <workItem from="1647949200534" duration="5420000" />
+      <workItem from="1648035976295" duration="78000" />
+      <workItem from="1648036079896" duration="8280000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -228,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647952707953</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="弹出动画">
+      <created>1647954414671</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1647954414671</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +282,8 @@
     <MESSAGE value="实现弹出框 上 中 下 功能" />
     <MESSAGE value="实现实现了只能有一个toast的功能" />
     <MESSAGE value="解决toast的一个bug 多次调用close()" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决toast的一个bug 多次调用close()" />
+    <MESSAGE value="弹出动画" />
+    <option name="LAST_COMMIT_MESSAGE" value="弹出动画" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

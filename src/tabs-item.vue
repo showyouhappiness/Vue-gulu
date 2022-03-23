@@ -1,0 +1,24 @@
+<template>
+  <div class="tabs-item">
+    <slot></slot>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: "GuluTabsItem",
+  props: {
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
+}
+</script>
+
+<style scoped>
+.tabs-item {
+}
+</style>
