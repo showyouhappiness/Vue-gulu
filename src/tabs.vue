@@ -46,6 +46,9 @@ export default {
     this.$emit("update:selected", this.selected);
   },
   mounted() {
+    if (this.$children.length === 0) {
+      console.error("Tabs组件必须包含子组件tabs-head和tabs-item");
+    }
     this.eventBus.$emit("tabs-mounted", this.selected);
   }
 }

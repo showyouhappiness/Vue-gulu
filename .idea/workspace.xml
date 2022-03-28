@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="创建tabs基本组件">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="添加选中样式  实现禁用功能">
+      <change afterPath="$PROJECT_DIR$/test/tabs.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tabs-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs-body.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tabs-head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs-head.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tabs-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindow拉取请求.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="ts.external.directory.path" value="C:\Users\l1477\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.7172.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -66,87 +66,87 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\test" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Karma.Input.事件">
-    <configuration name="Input" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Karma.TabsItem.接受name属性">
+    <configuration name="TabsItem" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
       <test-names>
-        <test-name value="Input" />
+        <test-name value="TabsItem" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Input.事件" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
-      <working-directory value="$PROJECT_DIR$" />
-      <node-interpreter value="project" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
-      <test-names>
-        <test-name value="Input" />
-        <test-name value="事件" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Input.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="TabsItem.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
       <test-names>
-        <test-name value="Input" />
+        <test-name value="TabsItem" />
         <test-name value="存在." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Input.props" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
-      <working-directory value="$PROJECT_DIR$" />
-      <node-interpreter value="project" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
-      <test-names>
-        <test-name value="Input" />
-        <test-name value="props" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Input.props.接收 value" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="TabsItem.接受disabled属性 " type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
       <test-names>
-        <test-name value="Input" />
-        <test-name value="props" />
-        <test-name value="接收 value" />
+        <test-name value="TabsItem" />
+        <test-name value="接受disabled属性 " />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="TabsItem.接受name属性" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
+      <test-names>
+        <test-name value="TabsItem" />
+        <test-name value="接受name属性" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tabs.可以接受direction " type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
+      <test-names>
+        <test-name value="Tabs" />
+        <test-name value="可以接受direction " />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Karma.Input.事件" />
-        <item itemvalue="Karma.Input.props.接收 value" />
-        <item itemvalue="Karma.Input.props" />
-        <item itemvalue="Karma.Input" />
-        <item itemvalue="Karma.Input.存在." />
+        <item itemvalue="Karma.TabsItem.接受name属性" />
+        <item itemvalue="Karma.TabsItem.接受disabled属性 " />
+        <item itemvalue="Karma.TabsItem" />
+        <item itemvalue="Karma.TabsItem.存在." />
+        <item itemvalue="Karma.Tabs.可以接受direction " />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +187,8 @@
       <workItem from="1648035976295" duration="78000" />
       <workItem from="1648036079896" duration="10304000" />
       <workItem from="1648253978658" duration="2403000" />
-      <workItem from="1648433917514" duration="10830000" />
+      <workItem from="1648433917514" duration="11194000" />
+      <workItem from="1648465168148" duration="4863000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -273,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648453221040</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加选中样式  实现禁用功能">
+      <created>1648463404522</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648463404522</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +310,8 @@
     <MESSAGE value="解决toast的一个bug 多次调用close()" />
     <MESSAGE value="弹出动画" />
     <MESSAGE value="创建tabs基本组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建tabs基本组件" />
+    <MESSAGE value="添加选中样式  实现禁用功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加选中样式  实现禁用功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

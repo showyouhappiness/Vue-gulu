@@ -37,16 +37,18 @@ export default {
     }
   },
   created() {
-    this.eventBus.$on('update:selected', (name) => {
-      this.isActive = this.name === name;
-    });
+    if (this.eventBus) {
+      this.eventBus.$on('update:selected', (name) => {
+        this.isActive = this.name === name;
+      });
+    }
   },
   methods: {
     handleClick() {
       if (this.disabled) {
         return
       }
-      this.eventBus.$emit('update:selected', this.name);
+      this.eventBus && this.eventBus.$emit('update:selected', this.name);
     }
   }
 }
@@ -66,6 +68,7 @@ export default {
     color: #409eff;
     border-bottom: 2px solid #409eff;
   }
+
   &.disabled {
     color: #c0c4cc;
     cursor: not-allowed;
