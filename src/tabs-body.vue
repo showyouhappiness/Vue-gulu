@@ -8,9 +8,13 @@
 <script>
 export default {
   name: "GuluTabsBody",
+  inject: ["eventBus"],
+  created() {
+  }
 }
 </script>
 
 <style scoped>
-.tabs-body {}
+.tabs-body {
+}
 </style>

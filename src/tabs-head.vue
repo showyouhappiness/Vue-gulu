@@ -1,7 +1,9 @@
 <template>
   <div class="tabs-head">
     <slot></slot>
-    <slot name="actions"></slot>
+    <div class="actions-wrapper">
+      <slot name="actions"></slot>
+    </div>
   </div>
 </template>
 
@@ -10,14 +12,20 @@ export default {
   name: "GuluTabsHead",
   inject: ['eventBus'],
   created() {
-    console.log('测试');
-    console.log(this.eventBus);
-    console.log('测试');
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+$gulu-tabs-head-height: 40px;
 .tabs-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: $gulu-tabs-head-height;
+
+  > .actions-wrapper {
+    margin-left: auto;
+  }
 }
 </style>

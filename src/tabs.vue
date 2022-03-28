@@ -36,12 +36,17 @@ export default {
     }
   },
   provide() {
+    // 全局注册, 唯一可以跨组件调用的属性, 其他组件只提供给儿子, 不提供给孙子
+    // 其他组件可以通过 this.$root.$options.components.GuluTabs 获取到 GuluTabs 组件
     return {
       eventBus: this.eventBus,
     }
   },
   created() {
     this.$emit("update:selected", this.selected);
+  },
+  mounted() {
+    this.eventBus.$emit("tabs-mounted", this.selected);
   }
 }
 </script>
