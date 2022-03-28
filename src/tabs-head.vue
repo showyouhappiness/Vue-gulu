@@ -20,9 +20,9 @@ export default {
 $gulu-tabs-head-height: 40px;
 .tabs-head {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   height: $gulu-tabs-head-height;
+  border-bottom: 1px solid #e8e8e8;
 
   > .actions-wrapper {
     margin-left: auto;

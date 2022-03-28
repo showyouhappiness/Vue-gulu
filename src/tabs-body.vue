@@ -16,5 +16,6 @@ export default {
 
 <style scoped>
 .tabs-body {
+  padding: 10px 0;
 }
 </style>

@@ -32,7 +32,7 @@ export default {
     classes() {
       return {
         active: this.isActive,
-        disabled: this.isDisabled
+        disabled: this.disabled
       }
     }
   },
@@ -43,6 +43,9 @@ export default {
   },
   methods: {
     handleClick() {
+      if (this.disabled) {
+        return
+      }
       this.eventBus.$emit('update:selected', this.name);
     }
   }
@@ -51,12 +54,21 @@ export default {
 
 <style scoped lang="scss">
 .tabs-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
   padding: 0 1em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
 
   &.active {
-    color: #fff;
-    background-color: #409eff;
+    color: #409eff;
+    border-bottom: 2px solid #409eff;
+  }
+  &.disabled {
+    color: #c0c4cc;
+    cursor: not-allowed;
   }
 }
 </style>

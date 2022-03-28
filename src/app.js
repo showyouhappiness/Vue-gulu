@@ -56,7 +56,7 @@ new Vue({
         loading2: true,
         loading3: false,
         message: "hi",
-        selectedTab: "设置",
+        selectedTab: "首页",
     },
     created() {
     },
