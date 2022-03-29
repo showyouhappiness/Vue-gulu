@@ -31,21 +31,30 @@ export default {
   methods: {
     positionContent() {
       const {triggerWrapper, contentWrapper} = this.$refs
+      console.log(triggerWrapper, contentWrapper);
       document.body.appendChild(contentWrapper)
       let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
-      if (this.position === 'top') {
-        contentWrapper.style.top = `${top + window.scrollY}px` // 加上滚动条的高度
-        contentWrapper.style.left = `${left + window.scrollX}px` // 加上滚动条的高度
-      } else if (this.position === 'bottom') {
-        contentWrapper.style.top = `${top + height + window.scrollY}px` // 加上滚动条的高度
-        contentWrapper.style.left = `${left + window.scrollX}px` // 加上滚动条的高度
-      } else if (this.position === 'left') {
-        contentWrapper.style.top = `${top + window.scrollY}px` // 加上滚动条的高度
-        contentWrapper.style.left = `${left + window.scrollX}px` // 加上滚动条的高度
-      } else if (this.position === 'right') {
-        contentWrapper.style.top = `${top + window.scrollY}px` // 加上滚动条的高度
-        contentWrapper.style.left = `${left + width + window.scrollX}px` // 加上滚动条的高度
+      console.log(width, height, top, left);
+      let positions = {
+        top: {
+          top: top + window.scrollY,
+          left: left + window.scrollX,
+        },
+        bottom: {
+          top: top + height + window.scrollY,
+          left: left + window.scrollX,
+        },
+        left: {
+          top: top + window.scrollY - height / 2,
+          left: left + window.scrollX,
+        },
+        right: {
+          top: top + window.scrollY - height / 2,
+          left: left + width + window.scrollX,
+        }
       }
+      contentWrapper.style.top = `${positions[this.position].top}px`
+      contentWrapper.style.left = `${positions[this.position].left}px`
     },
 
     onclickDocument(e) {
@@ -151,7 +160,6 @@ export default {
   &.position-left {
     transform: translateX(-100%);
     margin-left: -10px;
-    margin-top: -10px;
 
     &::before, &::after {
       top: 10px;
@@ -167,9 +175,9 @@ export default {
       left: calc(100% - 1px);
     }
   }
+
   &.position-right {
     margin-left: 10px;
-    margin-top: -10px;
 
     &::before, &::after {
       top: 10px;
