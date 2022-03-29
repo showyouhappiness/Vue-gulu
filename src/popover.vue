@@ -1,6 +1,6 @@
 <template>
   <div class="popover" @click="showPopover" ref="popover"> <!-- .stop 阻止当前事件冒泡-->
-    <div ref="contentWrapper" class="content-wrapper" v-if="show">
+    <div ref="contentWrapper" class="content-wrapper" v-if="show" :class="{[`position-${position}`]:true}">
       <slot name="content"></slot>
     </div>
     <span ref="triggerWrapper">
@@ -30,10 +30,22 @@ export default {
   // y=x().bind(this) 生成另外一个函数
   methods: {
     positionContent() {
-      document.body.appendChild(this.$refs.contentWrapper)
-      let {top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
-      this.$refs.contentWrapper.style.top = `${top + window.scrollY}px` // 加上滚动条的高度
-      this.$refs.contentWrapper.style.left = `${left + window.scrollX}px` // 加上滚动条的高度
+      const {triggerWrapper, contentWrapper} = this.$refs
+      document.body.appendChild(contentWrapper)
+      let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
+      if (this.position === 'top') {
+        contentWrapper.style.top = `${top + window.scrollY}px` // 加上滚动条的高度
+        contentWrapper.style.left = `${left + window.scrollX}px` // 加上滚动条的高度
+      } else if (this.position === 'bottom') {
+        contentWrapper.style.top = `${top + height + window.scrollY}px` // 加上滚动条的高度
+        contentWrapper.style.left = `${left + window.scrollX}px` // 加上滚动条的高度
+      } else if (this.position === 'left') {
+        contentWrapper.style.top = `${top + window.scrollY}px` // 加上滚动条的高度
+        contentWrapper.style.left = `${left + window.scrollX}px` // 加上滚动条的高度
+      } else if (this.position === 'right') {
+        contentWrapper.style.top = `${top + window.scrollY}px` // 加上滚动条的高度
+        contentWrapper.style.left = `${left + width + window.scrollX}px` // 加上滚动条的高度
+      }
     },
 
     onclickDocument(e) {
@@ -85,11 +97,10 @@ export default {
   //box-shadow: 0 0 5px #ccc;
   filter: drop-shadow(0 2px 2px #ccc);
   background-color: #fff;
-  transform: translateY(-100%);
-  margin-top: -10px;
   padding: .5em 1em;
   max-width: 20em;
   word-break: break-all;
+  border-radius: 5px;
 
   &::before, &::after {
     content: '';
@@ -98,17 +109,81 @@ export default {
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    left: 10px;
   }
 
-  &::before {
-    border-top-color: #ccc;
-    top: 100%;
+  &.position-top {
+    transform: translateY(-100%);
+    margin-top: -10px;
+
+    &::before, &::after {
+      left: 10px;
+    }
+
+    &::before {
+      border-top-color: #ccc;
+      top: 100%;
+    }
+
+    &::after {
+      border-top-color: #fff;
+      top: calc(100% - 1px);
+    }
   }
 
-  &::after {
-    border-top-color: #fff;
-    top: calc(100% - 1px);
+  &.position-bottom {
+    margin-top: 10px;
+
+    &::before, &::after {
+      left: 10px;
+    }
+
+    &::before {
+      border-bottom-color: #ccc;
+      bottom: 100%;
+    }
+
+    &::after {
+      border-bottom-color: #fff;
+      bottom: calc(100% - 1px);
+    }
+  }
+
+  &.position-left {
+    transform: translateX(-100%);
+    margin-left: -10px;
+    margin-top: -10px;
+
+    &::before, &::after {
+      top: 10px;
+    }
+
+    &::before {
+      border-left-color: #ccc;
+      left: 100%;
+    }
+
+    &::after {
+      border-left-color: #fff;
+      left: calc(100% - 1px);
+    }
+  }
+  &.position-right {
+    margin-left: 10px;
+    margin-top: -10px;
+
+    &::before, &::after {
+      top: 10px;
+    }
+
+    &::before {
+      border-right-color: #ccc;
+      right: 100%;
+    }
+
+    &::after {
+      border-right-color: #fff;
+      right: calc(100% - 1px);
+    }
   }
 }
 </style>

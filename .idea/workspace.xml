@@ -186,7 +186,7 @@
       <workItem from="1648253978658" duration="2403000" />
       <workItem from="1648433917514" duration="11194000" />
       <workItem from="1648465168148" duration="6524000" />
-      <workItem from="1648518414920" duration="12057000" />
+      <workItem from="1648518414920" duration="14452000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -293,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648520999762</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="完成popover样式">
+      <created>1648547056155</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648547056155</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
