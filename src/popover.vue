@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="showPopover" ref="popover"> <!-- .stop 阻止当前事件冒泡-->
+  <div class="popover" ref="popover"> <!-- .stop 阻止当前事件冒泡-->
     <div ref="contentWrapper" class="content-wrapper" v-if="show" :class="{[`position-${position}`]:true}">
       <slot name="content"></slot>
     </div>
@@ -12,11 +12,6 @@
 <script>
 export default {
   name: "GuluPopover",
-  data() {
-    return {
-      show: false
-    }
-  },
   props: {
     position: {
       type: String,
@@ -25,6 +20,42 @@ export default {
         return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
       }
     },
+    trigger: {
+      type: String,
+      default: 'click',
+      validator(value) {
+        return ['click', 'hover'].indexOf(value) >= 0
+      }
+    }
+  },
+  data() {
+    return {
+      show: false,
+    }
+  },
+  mounted() {
+    if (this.trigger === 'click') {
+      this.$refs.popover.addEventListener('click', this.showPopover)
+    } else {
+      this.$refs.popover.addEventListener('mouseenter', this.onShow)
+      this.$refs.popover.addEventListener('mouseleave', this.onHide)
+    }
+  },
+  destroyed() {
+    if (this.trigger === 'click') {
+      this.$refs.popover.removeEventListener('click', this.showPopover)
+    } else {
+      this.$refs.popover.removeEventListener('mouseenter', this.onShow)
+      this.$refs.popover.removeEventListener('mouseleave', this.onHide)
+    }
+  },
+  computed: {
+    openEvent() {
+      return this.trigger === 'click' ? 'click' : 'mouseenter'
+    },
+    closeEvent() {
+      return this.trigger === 'click' ? 'click' : 'mouseleave'
+    }
   },
   // x() 一个函数
   // y=x().bind(this) 生成另外一个函数
@@ -130,11 +161,13 @@ export default {
 
     &::before {
       border-top-color: #ccc;
+      border-bottom: none;
       top: 100%;
     }
 
     &::after {
       border-top-color: #fff;
+      border-bottom: none;
       top: calc(100% - 1px);
     }
   }
@@ -148,11 +181,13 @@ export default {
 
     &::before {
       border-bottom-color: #ccc;
+      border-top: none;
       bottom: 100%;
     }
 
     &::after {
       border-bottom-color: #fff;
+      border-top: none;
       bottom: calc(100% - 1px);
     }
   }
@@ -167,11 +202,13 @@ export default {
 
     &::before {
       border-left-color: #ccc;
+      border-right: none;
       left: 100%;
     }
 
     &::after {
       border-left-color: #fff;
+      border-right: none;
       left: calc(100% - 1px);
     }
   }
@@ -185,11 +222,13 @@ export default {
 
     &::before {
       border-right-color: #ccc;
+      border-left: none;
       right: 100%;
     }
 
     &::after {
       border-right-color: #fff;
+      border-left: none;
       right: calc(100% - 1px);
     }
   }
