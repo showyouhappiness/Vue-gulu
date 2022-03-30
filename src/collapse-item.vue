@@ -1,6 +1,6 @@
 <template>
   <div class="collapseItem">
-    <div class="title" @click="isActive=!isActive">
+    <div class="title" @click="toggle">
       {{ title }}
     </div>
     <div class="content" v-if="isActive">
@@ -20,9 +20,30 @@ export default {
   },
   data() {
     return {
-      isActive: true
+      isActive: false
     }
   },
+  inject: ["eventBus"],
+  mounted() {
+    this.eventBus && this.eventBus.$on("update:selected", (vm) => {
+      if (vm !== this) {
+        this.close()
+      }
+    })
+  },
+  methods: {
+    toggle() {
+      if (this.isActive) {
+        this.isActive = false
+      } else {
+        this.isActive = true
+        this.eventBus && this.eventBus.$emit("update:selected", this)
+      }
+    },
+    close() {
+      this.isActive = false
+    }
+  }
 }
 </script>
 
@@ -44,13 +65,15 @@ export default {
       border-top-right-radius: 4px;
     }
   }
+
   &:last-child {
-    .title,.content {
+    .title, .content {
       border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px;
       margin-bottom: -1px;
     }
   }
+
   .content {
     padding: 5px 10px;
   }
