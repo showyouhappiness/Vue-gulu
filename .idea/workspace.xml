@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="使用表驱动编程驱动代码">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="完成自定义click和hover">
+      <change afterPath="$PROJECT_DIR$/test/popover.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/popover.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,83 +67,84 @@
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Karma.TabsItem.接受name属性">
-    <configuration name="TabsItem" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Karma.Button">
+    <configuration name="Button" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
       <test-names>
-        <test-name value="TabsItem" />
+        <test-name value="Button" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="TabsItem.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="Button.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
       <test-names>
-        <test-name value="TabsItem" />
+        <test-name value="Button" />
         <test-name value="存在." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="TabsItem.接受disabled属性 " type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="Button.可以设置position." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
       <test-names>
-        <test-name value="TabsItem" />
-        <test-name value="接受disabled属性 " />
+        <test-name value="Button" />
+        <test-name value="可以设置position." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="TabsItem.接受name属性" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="Button.可以设置trigger." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
       <test-names>
-        <test-name value="TabsItem" />
-        <test-name value="接受name属性" />
+        <test-name value="Button" />
+        <test-name value="可以设置trigger." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Tabs.可以接受direction " type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="Input.事件.支持 change/input/focus/blur 事件" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/tabs.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
       <test-names>
-        <test-name value="Tabs" />
-        <test-name value="可以接受direction " />
+        <test-name value="Input" />
+        <test-name value="事件" />
+        <test-name value="支持 change/input/focus/blur 事件" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Karma.TabsItem.接受name属性" />
-        <item itemvalue="Karma.TabsItem.接受disabled属性 " />
-        <item itemvalue="Karma.TabsItem" />
-        <item itemvalue="Karma.TabsItem.存在." />
-        <item itemvalue="Karma.Tabs.可以接受direction " />
+        <item itemvalue="Karma.Button" />
+        <item itemvalue="Karma.Button.可以设置trigger." />
+        <item itemvalue="Karma.Button.可以设置position." />
+        <item itemvalue="Karma.Button.存在." />
+        <item itemvalue="Karma.Input.事件.支持 change/input/focus/blur 事件" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +188,8 @@
       <workItem from="1648433917514" duration="11194000" />
       <workItem from="1648465168148" duration="6524000" />
       <workItem from="1648518414920" duration="14452000" />
-      <workItem from="1648556093275" duration="2590000" />
+      <workItem from="1648556093275" duration="2942000" />
+      <workItem from="1648602724372" duration="4824000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -308,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648557370222</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="完成自定义click和hover">
+      <created>1648558788821</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1648558788821</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +351,8 @@
     <MESSAGE value="完成最简单的点击 popover" />
     <MESSAGE value="完成popover样式" />
     <MESSAGE value="使用表驱动编程驱动代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用表驱动编程驱动代码" />
+    <MESSAGE value="完成自定义click和hover" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成自定义click和hover" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

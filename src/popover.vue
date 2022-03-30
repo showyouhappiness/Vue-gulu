@@ -62,10 +62,8 @@ export default {
   methods: {
     positionContent() {
       const {triggerWrapper, contentWrapper} = this.$refs
-      console.log(triggerWrapper, contentWrapper);
       document.body.appendChild(contentWrapper)
       let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
-      console.log(width, height, top, left);
       let positions = {
         top: {
           top: top + window.scrollY,
