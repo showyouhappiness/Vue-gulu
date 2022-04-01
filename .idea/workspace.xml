@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="collapse基本功能和样式完成">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="添加可单个显示、多个显示功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/collapse-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse-item.vue" afterDir="false" />
@@ -191,7 +191,8 @@
       <workItem from="1648518414920" duration="14452000" />
       <workItem from="1648556093275" duration="2942000" />
       <workItem from="1648602724372" duration="7321000" />
-      <workItem from="1648649539240" duration="3427000" />
+      <workItem from="1648649539240" duration="3726000" />
+      <workItem from="1648803005407" duration="1418000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -333,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648651688515</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="添加可单个显示、多个显示功能">
+      <created>1648653069321</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1648653069321</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +378,8 @@
     <MESSAGE value="完成自定义click和hover" />
     <MESSAGE value="测试代码" />
     <MESSAGE value="collapse基本功能和样式完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="collapse基本功能和样式完成" />
+    <MESSAGE value="添加可单个显示、多个显示功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加可单个显示、多个显示功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
