@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="修复报错">
-      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/button-demo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/components/button.md" afterDir="false" />
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="加上之后可以build 但是页面内容出现问题">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/get-started/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/install/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Vue-gulu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,19 +56,24 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1pkNnEv6c3Mvxu4zlf1wZtka6Gz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindow拉取请求.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/theme" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="C:\Users\l1477\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.7172.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -81,7 +90,7 @@
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu" />
     </key>
   </component>
-  <component name="RunManager" selected="Karma.Button">
+  <component name="RunManager" selected="Shell Script.deploy.sh">
     <configuration name="Button" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
@@ -92,20 +101,6 @@
       <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
       <test-names>
         <test-name value="Button" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Button.存在." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
-      <working-directory value="$PROJECT_DIR$" />
-      <node-interpreter value="project" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
-      <test-names>
-        <test-name value="Button" />
-        <test-name value="存在." />
       </test-names>
       <method v="2" />
     </configuration>
@@ -137,28 +132,39 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Input.事件.支持 change/input/focus/blur 事件" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
-      <working-directory value="$PROJECT_DIR$" />
-      <node-interpreter value="project" />
+    <configuration name="deploy.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/deploy.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/input.test.js" />
-      <test-names>
-        <test-name value="Input" />
-        <test-name value="事件" />
-        <test-name value="支持 change/input/focus/blur 事件" />
-      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="docs:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docs:build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="npm" />
+      <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.docs:build" />
+        <item itemvalue="Shell Script.deploy.sh" />
         <item itemvalue="Karma.Button" />
         <item itemvalue="Karma.Button.可以设置trigger." />
         <item itemvalue="Karma.Button.可以设置position." />
-        <item itemvalue="Karma.Button.存在." />
-        <item itemvalue="Karma.Input.事件.支持 change/input/focus/blur 事件" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +213,8 @@
       <workItem from="1648649539240" duration="3726000" />
       <workItem from="1648803005407" duration="1418000" />
       <workItem from="1648877609609" duration="6032000" />
-      <workItem from="1648885628284" duration="3406000" />
+      <workItem from="1648885628284" duration="6311000" />
+      <workItem from="1648892251917" duration="12871000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -363,7 +370,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648878118126</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="使用初步显示出文档页面">
+      <created>1648889255207</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1648889255207</updated>
+    </task>
+    <task id="LOCAL-00024" summary="加上之后可以build 但是页面内容出现问题">
+      <created>1648889302751</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1648889302751</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +402,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="input add v-model" />
     <MESSAGE value="col代码的重构&#10;完成row和col的测试" />
     <MESSAGE value="layout header content sider footer 完成" />
@@ -402,7 +424,9 @@
     <MESSAGE value="collapse基本功能和样式完成" />
     <MESSAGE value="添加可单个显示、多个显示功能" />
     <MESSAGE value="修复报错" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复报错" />
+    <MESSAGE value="使用初步显示出文档页面" />
+    <MESSAGE value="加上之后可以build 但是页面内容出现问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="加上之后可以build 但是页面内容出现问题" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
