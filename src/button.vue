@@ -1,8 +1,8 @@
 <template>
   <button
-    class="g-button"
-    :class="{ [`icon-${iconPosition}`]: true }"
-    @click="$emit('click')"
+      class="g-button"
+      :class="{ [`icon-${iconPosition}`]: true }"
+      @click="$emit('click')"
   >
     <g-icon :name="icon" class="icon" v-if="icon && !loading"></g-icon>
     <g-icon v-if="loading" class="loading icon" name="loading"></g-icon>
@@ -13,6 +13,7 @@
 </template>
 <script>
 import Icon from "./icon";
+
 export default {
   name: "GuluButton",
   // props: ["icon", "iconPosition"],
@@ -36,6 +37,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$font-size: 14px;
+$button-height: 32px;
+$button-bg: #fff;
+$button-active-bg: #f5f5f5;
+$border-radius: 4px;
+$color: #333;
+$border-color: #333;
+$border-color-hover: #e6e6e6;
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -45,17 +54,19 @@ export default {
     transform: rotate(360deg);
   }
 }
+
 .g-button {
-  height: var(--button-height);
-  font-size: var(--font-size);
+  height: $button-height;
+  font-size: $font-size;
   padding: 0 0.55em;
-  background: var(--button-bg);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  background: $button-bg;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+
   > .icon {
     order: 1;
     margin-right: 0.3em;
@@ -66,11 +77,11 @@ export default {
   }
 
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
   }
 
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
 
   &:focus {
@@ -88,6 +99,7 @@ export default {
       order: 1;
     }
   }
+
   .loading {
     animation: spin 2s infinite linear;
   }
