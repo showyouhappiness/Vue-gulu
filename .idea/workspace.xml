@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="添加可单个显示、多个显示功能">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="设置默认选择功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collapse-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1pkNnEv6c3Mvxu4zlf1wZtka6Gz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -193,6 +194,7 @@
       <workItem from="1648602724372" duration="7321000" />
       <workItem from="1648649539240" duration="3726000" />
       <workItem from="1648803005407" duration="1418000" />
+      <workItem from="1648877609609" duration="342000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
