@@ -10,13 +10,13 @@ import Vue from 'vue'
 export default {
   name: "GuluCollapse",
   props: {
-    accordion: {
+    single: {
       type: Boolean,
       default: false
     },
     selected: {
-      type: String,
-    }
+      type: Array,
+    },
   },
   data() {
     return {
@@ -29,7 +29,27 @@ export default {
     }
   },
   mounted() {
-    this.eventBus.$emit('update:selected', this.selected)
+
+    this.eventBus.$emit('update:selected', this.selected) // 初始化时，通知所有子组件设置selected
+
+    this.eventBus.$on('update:addSelected', (name) => {
+      let selectedCopy = JSON.parse(JSON.stringify(this.selected)) // 深拷贝
+      if (this.single) {
+        selectedCopy = [name]
+      } else {
+        selectedCopy.push(name)
+      }
+      this.eventBus.$emit('update:selected', selectedCopy)  // 通知子组件设置selected
+      this.$emit('update:selected', selectedCopy)  // 通知父组件设置selected
+    })
+
+    this.eventBus.$on('update:removeSelected', (name) => {
+      let selectedCopy = JSON.parse(JSON.stringify(this.selected)) // 深拷贝
+      let index = selectedCopy.indexOf(name)
+      selectedCopy.splice(index, 1)
+      this.eventBus.$emit('update:selected', selectedCopy)  // 发送消息
+      this.$emit('update:selected', selectedCopy) // 发送消息
+    })
   }
 }
 </script>

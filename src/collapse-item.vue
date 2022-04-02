@@ -1,9 +1,9 @@
 <template>
   <div class="collapseItem">
-    <div class="title" @click="toggle">
+    <div class="title" @click="toggle" :data-name="name">
       {{ title }}
     </div>
-    <div class="content" v-if="isActive">
+    <div class="content" v-if="isActive" ref="content">
       <slot></slot>
     </div>
   </div>
@@ -29,28 +29,22 @@ export default {
   },
   inject: ["eventBus"],
   mounted() {
-    this.eventBus && this.eventBus.$on("update:selected", (name) => {
-      if (name !== this.name) {
-        this.close()
+    this.eventBus && this.eventBus.$on("update:selected", (names) => {
+      if (names.indexOf(this.name) >= 0) {
+        this.isActive = true
       } else {
-        this.open()
+        this.isActive = false
       }
     })
   },
   methods: {
     toggle() {
       if (this.isActive) {
-        this.isActive = false
+        this.eventBus && this.eventBus.$emit("update:removeSelected", this.name)  // 发送消息
       } else {
-        this.eventBus && this.eventBus.$emit("update:selected", this.name)
+        this.eventBus && this.eventBus.$emit("update:addSelected", this.name)      // 发送消息
       }
     },
-    close() {
-      this.isActive = false
-    },
-    open() {
-      this.isActive = true
-    }
   }
 }
 </script>
