@@ -20,7 +20,7 @@ import TabsPane from "./tabs-pane";
 import Popover from "./popover";
 import Collapse from "./collapse";
 import CollapseItem from "./collapse-item";
-// import Cascader from "./cascader";
+import Cascader from "./cascader";
 // import CascaderPanel from "./cascader-panel";
 // import Carousel from "./carousel";
 // import CarouselItem from "./carousel-item";
@@ -38,7 +38,6 @@ Vue.component('g-header', Header)
 Vue.component('g-content', Content)
 Vue.component('g-sider', Sider)
 Vue.component('g-footer', Footer)
-Vue.component('g-footer', Footer)
 Vue.component('g-toast', Toast)
 Vue.component('g-tabs', Tabs)
 Vue.component('g-tabs-head', TabsHead)
@@ -48,6 +47,7 @@ Vue.component('g-tabs-pane', TabsPane)
 Vue.component('g-popover', Popover)
 Vue.component('g-collapse', Collapse)
 Vue.component('g-collapse-item', CollapseItem)
+Vue.component('g-cascader', Cascader)
 
 Vue.use(plugin)
 
@@ -55,37 +55,29 @@ Vue.use(plugin)
 new Vue({
     el: "#app",
     data: {
-        loading1: false,
-        loading2: true,
-        loading3: false,
-        message: "hi",
-        selectedTab: ['2'],
-    },
-    created() {
-    },
-    methods: {
-        showToast1() {
-            this.showToast('top')
-        },
-        showToast2() {
-            this.showToast('middle')
-        },
-        showToast3() {
-            this.showToast('bottom')
-        },
-        showToast(position) {
-            this.$toast('I am message', {
-                position,
-                enableHtml: false,
-                closeButton: {
-                    text: '知道了',
-                    callback(toask) {
-                        toask.log()
-                        console.log('I know')
-                    }
-                }
-            })
-        }
+        source: [{
+            name: "zhejiang",
+            children: [
+                {
+                    name: "hangzhou",
+                    children: [
+                        {name: "xihu"},
+                        {name: "shangcheng"},
+                        {name: "jianggan"}
+                    ]
+                }]
+        }, {
+            name: "jiangsu",
+            children: [
+                {
+                    name: "nanjing",
+                    children: [
+                        {name: "zhonghuamen"},
+                        {name: "pukou"},
+                        {name: "liuzhang"}
+                    ]
+                }]
+        }],
     },
 });
 

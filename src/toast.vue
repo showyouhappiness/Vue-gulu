@@ -80,10 +80,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$font-size: 16px;
-$toast-height: 40px;
-$line-height: 40px;
-$toast-bg: rgba(0, 0, 0, .75);
+@import "var";
 @keyframes slide-up {
   0% {
     opacity: 0;
