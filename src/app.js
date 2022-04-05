@@ -55,6 +55,7 @@ Vue.use(plugin)
 new Vue({
     el: "#app",
     data: {
+        selected: [],
         source: [{
             name: "zhejiang",
             children: [
