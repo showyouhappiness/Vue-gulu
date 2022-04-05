@@ -1,5 +1,7 @@
+$blue: #4a90e2;
 $border-color-hover: #666;
 $border-color: #999;
+$border-color-light: lighten($border-color, 30%);
 $border-radius: 4px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
 $button-active-bg: #f5f5f5;
@@ -7,11 +9,22 @@ $button-bg: #fff;
 $button-height: 32px;
 $color: #333;
 $font-size: 14px;
+$grey: #eee;
 $height: 32px;
-$line-height: 40px;
-$red: #f1453d;
+$input-height: 32px;
+$light-color: #666;
+$line-height: 32px;
+$red: #F1453D;
+$small-font-size: 12px;
 $toast-bg: rgba(0, 0, 0, .75);
 $toast-height: 40px;
 .box-shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@mixin spin {
+  animation: spin 2s infinite linear;
 }
