@@ -21,6 +21,8 @@ import Popover from "./popover";
 import Collapse from "./collapse";
 import CollapseItem from "./collapse-item";
 import Cascader from "./cascader";
+import Slides from "./slides";
+import SlidesItem from "./slides-item";
 // import CascaderPanel from "./cascader-panel";
 // import Carousel from "./carousel";
 // import CarouselItem from "./carousel-item";
@@ -48,128 +50,16 @@ Vue.component('g-popover', Popover)
 Vue.component('g-collapse', Collapse)
 Vue.component('g-collapse-item', CollapseItem)
 Vue.component('g-cascader', Cascader)
+Vue.component('g-slides', Slides)
+Vue.component('g-slides-item', SlidesItem)
 
 Vue.use(plugin)
 
-import db from './db';
-
-function ajax(parentId = 0) {
-    return new Promise((success, fail) => {
-        setTimeout(() => {
-            let result = db.filter(item => item.parent_id === parentId);
-            result.forEach(node => {
-                node.isLeaf = db.filter(item => item.parent_id === node.id).length <= 0;
-            });
-            success(result);
-        }, 300);
-    });
-}
-
 new Vue({
     el: "#app",
-    data: {
-        selected: [],
-        source: [],
-    },
-    created() {
-        ajax(0).then(result => {
-            this.source = result;
-        });
-    },
-    methods: {
-        loadData({id}, updateSource) {
-            ajax(id).then(result => {
-                updateSource(result);
-            });
-        },
-        onUpdateSource(result) {
-        },
-        onUpdateSelected(selected) {
+    data() {
+        return {
+            selected: 'haha'
         }
-    }
+    },
 });
-
-
-//单元测试
-// import chai from 'chai';
-// import spies from 'chai-spies';
-// chai.use(spies)
-// const expect = chai.expect
-// {
-//     //测试按钮还有icon
-//     const Constructor = Vue.extend(Button)
-//     const vm = new Constructor({
-//         propsData: {
-//             icon: 'settings'
-//         }
-//     })
-//     vm.$mount('#test')
-//     let useElement = vm.$el.querySelector('use')
-//     let href = useElement.getAttribute('xlink:href')
-//     expect(href).to.eq('#icon-settings')
-//     vm.$el.remove()
-//     vm.$destroy()
-// }
-// {
-//     const Constructor = Vue.extend(Button)
-//     const vm = new Constructor({
-//         propsData: {
-//             icon: 'settings',
-//             loading: true
-//         }
-//     })
-//     vm.$mount()
-//     let useElement = vm.$el.querySelector('use')
-//     let href = useElement.getAttribute('xlink:href')
-//     expect(href).to.eq('#icon-loading')
-//     vm.$el.remove()
-//     vm.$destroy()
-// }
-// {
-//     const div = document.createElement('div')
-//     document.body.appendChild(div)
-//     const Constructor = Vue.extend(Button)
-//     const vm = new Constructor({
-//         propsData: {
-//             icon: 'settings'
-//         }
-//     })
-//     vm.$mount(div)
-//     let svg = vm.$el.querySelector('svg')
-//     let { order } = window.getComputedStyle(svg)
-//     expect(order).to.eq('1')
-//     vm.$el.remove()
-//     vm.$destroy()
-// }
-// {
-//     const div = document.createElement('div')
-//     document.body.appendChild(div)
-//     const Constructor = Vue.extend(Button)
-//     const vm = new Constructor({
-//         propsData: {
-//             icon: 'settings',
-//             iconPosition: 'right'
-//         }
-//     })
-//     vm.$mount(div)
-//     let svg = vm.$el.querySelector('svg')
-//     let { order } = window.getComputedStyle(svg)
-//     expect(order).to.eq('2')
-//     vm.$el.remove()
-//     vm.$destroy()
-// }
-// {
-//     //mock
-//     const Constructor = Vue.extend(Button)
-//     const vm = new Constructor({
-//         propsData: {
-//             icon: 'settings',
-//         }
-//     })
-//     vm.$mount()
-//     let spy = chai.spy(function(){})
-//     vm.$on('click', spy)
-//     let button = vm.$el
-//     button.click()
-//     expect(spy).to.have.been.called()
-// }

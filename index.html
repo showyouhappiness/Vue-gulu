@@ -28,16 +28,33 @@
     body {
         font-size: var(--font-size);
     }
+
+    .wrapper {
+        margin: 40px;
+    }
+
+    .box {
+        width: 100%;
+        height: 350px;
+        border: 1px solid red;
+    }
 </style>
 
 <body>
-<div id="app" style="padding: 100px 0 0 100px">
-    <g-cascader :source.sync="source" popover-height="200px"
-                @update:source="onUpdateSource"
-                @update:selected="onUpdateSelected"
-                :selected.sync="selected" :load-data="loadData" ></g-cascader>
+<div id="app">
+    <g-slides class="wrapper" :selected.sync="selected">
+        <g-slides-item name="haha">
+            <div class="box">1</div>
+        </g-slides-item>
+        <g-slides-item name="xixi">
+            <div class="box">2</div>
+        </g-slides-item>
+        <g-slides-item name="hehe">
+            <div class="box">3</div>
+        </g-slides-item>
+    </g-slides>
 </div>
-<script src="src/cascader_test.js"></script>
+<script src="src/app.js"></script>
 </body>
 
 </html>
