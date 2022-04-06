@@ -1,9 +1,13 @@
 <template>
-  <div class="g-slides">
+  <div class="g-slides" @mouseenter="onMouseEnter" @mouseleave="playAutomatically">
     <div class="g-slides-window" ref="window">
       <div class="g-slides-wrapper">
         <slot></slot>
       </div>
+    </div>
+    <div class="g-slides-dots">
+      <span v-for="n in childrenLength" :class="{active: selectedIndex === n-1}"
+            @click="select(n-1)">{{ n }}</span>
     </div>
   </div>
 </template>
@@ -20,30 +24,55 @@ export default {
       default: true,
     },
   },
+  data() {
+    return {
+      childrenLength: 0,
+      lastSelectedIndex: undefined,
+      timeId: undefined,
+    }
+  },
   mounted() {
     this.updateChildren()
     this.playAutomatically()
+    this.childrenLength = this.$children.length
   },
   updated() {
     this.updateChildren()
   },
+  computed: {
+    selectedIndex() {
+      return this.names.indexOf(this.selected) || 0
+    },
+    names() {
+      return this.$children.map(vm => vm.name)
+    },
+  },
   methods: {
+    onMouseEnter() {
+      window.clearTimeout(this.timeId)
+      this.timeId = undefined
+    },
     playAutomatically() {
-      const names = this.$children.map(vm => vm.name)
-      console.log(names)
-      let index = names.indexOf(this.getSelected())
+      if (this.timeId) {
+        return
+      }
       let run = () => {
-        let newIndex = index - 1
+        let index = this.names.indexOf(this.getSelected())
+        let newIndex = index + 1
         if (newIndex === -1) {
-          newIndex = names.length - 1
+          newIndex = this.names.length + 1
         }
-        if (newIndex === names.length) {
+        if (newIndex === this.names.length) {
           newIndex = 0
         }
-        this.$emit("update:selected", names[newIndex])
-        setTimeout(run, 3000)
+        this.select(newIndex)
+        this.timeId = setTimeout(run, 3000)
       }
-      setTimeout(run, 3000)
+      this.timeId = setTimeout(run, 3000)
+    },
+    select(index) {
+      this.lastSelectedIndex = this.selectedIndex
+      this.$emit("update:selected", this.names[index])
     },
     getSelected() {
       return this.selected || this.$children[0].name
@@ -51,11 +80,16 @@ export default {
     updateChildren() {
       let selected = this.getSelected()
       this.$children.forEach(vm => {
-        vm.selected = selected
-        const names = this.$children.map(vm => vm.name)
-        let newIndex = names.indexOf(selected)
-        let oldIndex = names.indexOf(vm.name)
-        vm.reverse = newIndex <= oldIndex
+        vm.reverse = this.lastSelectedIndex >= this.selectedIndex
+        if (this.lastSelectedIndex === this.$children.length - 1 && this.selectedIndex === 0) {
+          vm.reverse = false
+        }
+        if (this.lastSelectedIndex === 0 && this.selectedIndex === this.$children.length - 1) {
+          vm.reverse = true
+        }
+        this.$nextTick(() => {
+          vm.selected = selected
+        })
       })
     },
   },
