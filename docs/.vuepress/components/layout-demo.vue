@@ -20,7 +20,7 @@ import Content from "../../../src/content";
 import Footer from "../../../src/footer";
 
 export default {
-  name: "input-demo",
+  name: "layout-demo",
   components: {
     'g-layout': Layout,
     'g-sider': Sider,
