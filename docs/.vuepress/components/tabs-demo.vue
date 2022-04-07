@@ -27,6 +27,8 @@ import Tabs from '../../../src/tabs';
 import TabsHead from '../../../src/tabs-head';
 import TabsItem from '../../../src/tabs-item';
 import TabsPane from '../../../src/tabs-pane';
+import Icon from '../../../src/icon';
+import TabsBody from "../../../src/tabs-body";
 
 
 export default {
@@ -35,10 +37,13 @@ export default {
     'g-tabs': Tabs,
     'g-tabs-head': TabsHead,
     'g-tabs-item': TabsItem,
-    'g-tabs-pane': TabsPane
+    'g-tabs-pane': TabsPane,
+    'g-icon': Icon,
+    'g-tabs-body': TabsBody
   },
   data() {
     return {
+      selectedTab: "首页",
       content: `
       <g-tabs :selected.sync="selectedTab">
         <g-tabs-head class="crf">
