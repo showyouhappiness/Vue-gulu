@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="实现无缝衔接">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="完成轮播图组件">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/input-demo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/layout-demo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slides-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/slides-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slides.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/slides.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/cascader-demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/cascader-demo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/input.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/input.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/layout.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/layout.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindow拉取请求.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\l1477\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.7172.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -68,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\.vuepress\components" />
+      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\components" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\theme" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\plugin" />
-      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\i18n" />
-      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs" />
@@ -208,6 +212,7 @@
       <workItem from="1648964750655" duration="91000" />
       <workItem from="1648964886519" duration="17272000" />
       <workItem from="1649217843301" duration="10545000" />
+      <workItem from="1649298411083" duration="2289000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -412,7 +417,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649224070205</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="完成轮播图组件">
+      <created>1649243108577</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1649243108577</updated>
+    </task>
+    <task id="LOCAL-00031" summary="将 cascader 与 slider 文档初步完成">
+      <created>1649246108843</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1649246108843</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,8 +450,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="layout header content sider footer 完成" />
-    <MESSAGE value="update toast and plugin" />
     <MESSAGE value="实现调用方法，筛选是否回调" />
     <MESSAGE value="实现可以传文本到组件内，此方法默认为不开启状态" />
     <MESSAGE value="实现弹出框 上 中 下 功能" />
@@ -456,7 +473,9 @@
     <MESSAGE value="确定渲染内容" />
     <MESSAGE value="样式的基本修改" />
     <MESSAGE value="初步使用vue css动效完成轮播及动画" />
-    <option name="LAST_COMMIT_MESSAGE" value="初步使用vue css动效完成轮播及动画" />
+    <MESSAGE value="完成轮播图组件" />
+    <MESSAGE value="将 cascader 与 slider 文档初步完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="将 cascader 与 slider 文档初步完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

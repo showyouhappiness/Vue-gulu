@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Cascader from '../../../src/cascader'
+import Cascader from '../../../src/cascader';
 import db from '../../../src/db';
 import {removeListener} from "../../../src/click-outside";
 

@@ -30,6 +30,8 @@ export default {
   display: flex;
   flex-direction: column;
   border: 1px solid green;
+  overflow: hidden;
+  height: 100vh;
 
   &.hasSider {
     flex-direction: row;
