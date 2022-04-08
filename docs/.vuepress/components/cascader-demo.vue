@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Cascader from '../../../src/cascader';
-import db from '../../../src/db';
+import Cascader from '../../../src/cascader/cascader';
+import db from '../../../test/fixtures/db';
 import {removeListener} from "../../../src/click-outside";
 
 function ajax(parentId = 0) {

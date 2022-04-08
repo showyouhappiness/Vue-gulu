@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button @click="showToast1">top</button>
-    <button @click="showToast2">middle</button>
-    <button @click="showToast3">bottom</button>
+    <g-button @click="showToast1">top</g-button>
+    <g-button @click="showToast2">middle</g-button>
+    <g-button @click="showToast3">bottom</g-button>
     <pre><code>{{ content }}</code></pre>
   </div>
 </template>
@@ -11,11 +11,12 @@
 
 import Toast from '../../../src/toast';
 import Plugin from '../../../src/plugin';
+import Button from "../../../src/button/button";
 
 export default {
   name: "toast-demo",
   components: {
-    Plugin, Toast
+    Plugin, Toast, 'g-button': Button
   },
   data() {
     return {
@@ -24,9 +25,9 @@ export default {
       loading3: false,
       message: "hi",
       content: `
-    <button @click="showToast1">top</button>
-    <button @click="showToast2">middle</button>
-    <button @click="showToast3">bottom</button>
+    <g-button @click="showToast1">top</g-button>
+    <g-button @click="showToast2">middle</g-button>
+    <g-button @click="showToast3">bottom</g-button>
     `
     }
   },

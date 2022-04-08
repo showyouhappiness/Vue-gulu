@@ -1,14 +1,14 @@
 import Vue from 'vue';
-import plugin from "./plugin";
+import plugin from "../plugin";
 import Cascader from "./cascader";
-import {removeListener} from "./click-outside";
+import {removeListener} from "../click-outside";
 
 Vue.component('g-cascader', Cascader)
 
 
 Vue.use(plugin)
 
-import db from './db';
+import db from '../../test/fixtures/db';
 
 function ajax(parentId = 0) {
     return new Promise((success, fail) => {

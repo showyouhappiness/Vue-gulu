@@ -1,13 +1,13 @@
-import TabsHead from "../src/tabs-head";
+import TabsHead from "../src/tabs/tabs-head";
 
 const expect = chai.expect;
 import Vue from 'vue'
-import Tabs from '../src/tabs'
-import TabsBody from "../src/tabs-body";
-import TabsItem from "../src/tabs-item";
-import TabsPane from "../src/tabs-pane";
-import tabs from "../src/tabs";
-import tabsItem from "../src/tabs-item";
+import Tabs from '../src/tabs/tabs'
+import TabsBody from "../src/tabs/tabs-body";
+import TabsItem from "../src/tabs/tabs-item";
+import TabsPane from "../src/tabs/tabs-pane";
+import tabs from "../src/tabs/tabs";
+import tabsItem from "../src/tabs/tabs-item";
 import sinon from "sinon";
 
 Vue.component('g-tabs', Tabs)

@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import Tabs from '../../../src/tabs';
-import TabsHead from '../../../src/tabs-head';
-import TabsItem from '../../../src/tabs-item';
-import TabsPane from '../../../src/tabs-pane';
+import Tabs from '../../../src/tabs/tabs';
+import TabsHead from '../../../src/tabs/tabs-head';
+import TabsItem from '../../../src/tabs/tabs-item';
+import TabsPane from '../../../src/tabs/tabs-pane';
 import Icon from '../../../src/icon';
-import TabsBody from "../../../src/tabs-body";
+import TabsBody from "../../../src/tabs/tabs-body";
 
 
 export default {
