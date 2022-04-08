@@ -48,8 +48,7 @@ export default {
         closeButton: {
           text: '知道了',
           callback(toask) {
-            toask.log()
-            console.log('I know')
+            console.log(toask.$options.propsData.position, toask.$options.propsData.closeButton.text)
           }
         }
       })
