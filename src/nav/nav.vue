@@ -1,5 +1,5 @@
 <template>
-  <div class="g-nav">
+  <div class="g-nav" :class="{vertical}">
     <slot></slot>
   </div>
 </template>
@@ -7,57 +7,67 @@
 <script>
 export default {
   name: "GuluNav",
-  props: {
-    selected: {
-      type: Array,
-      default: () => []
-    },
-    multiple: {
-      type: Boolean,
-      default: false
-    },
-  },
-  mounted() {
-    this.updateChildren();
-    this.listenToChildren();
-  },
-  updated() {
-    this.updateChildren();
-  },
-  computed: {
-    items() {
-      return this.$children.filter(vm => vm.$options.name === "GuluNavItem");
+  provide() {
+    return {
+      root: this,
+      vertical: this.vertical
     }
   },
+  props: {
+    selected: {
+      type: String,
+    },
+    vertical: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      items: [],
+      namePath: []
+    }
+  },
+  mounted() {
+    this.updateChildren()
+    this.listenToChildren()
+  },
+  updated() {
+    this.updateChildren()
+  },
   methods: {
+    addItem(vm) {
+      this.items.push(vm)
+    },
     updateChildren() {
       this.items.forEach(vm => {
-        vm.selected = this.selected.indexOf(vm.value) >= 0;
-      });
+        vm.selected = this.selected === vm.name;
+      })
     },
     listenToChildren() {
       this.items.forEach(vm => {
-        vm.$on("add:selected", this.addSelected);
-      });
-    },
-    addSelected(value) {
-      if (this.multiple) {
-        if (this.selected.indexOf(value) < 0) {
-          let copy = JSON.parse(JSON.stringify(this.selected));
-          copy.push(value);
-          this.$emit("update:selected", copy);
-        }
-      } else {
-        this.$emit("update:selected", [value]);
-      }
+        vm.$on('update:selected', (name) => {
+          this.$emit('update:selected', name)
+        })
+      })
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
+@import "../../styles/var";
+
 .g-nav {
   display: flex;
-  border: 1px solid red;
+  border-bottom: 1px solid $grey;
+  color: $color;
+  cursor: default;
+  user-select: none;
+
+  &.vertical {
+    flex-direction: column;
+    border: 1px solid $grey;
+  }
 }
 </style>

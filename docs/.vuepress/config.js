@@ -24,6 +24,7 @@ module.exports = {
                     '/components/toast',
                     '/components/slides',
                     '/components/cascader',
+                    '/components/nav',
                 ],
             }
 

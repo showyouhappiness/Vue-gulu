@@ -65,7 +65,7 @@ new Vue({
     el: "#app",
     data() {
         return {
-            selected: ['home'],
+            selected: 'home',
         }
     },
 });
