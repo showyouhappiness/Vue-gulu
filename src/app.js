@@ -23,6 +23,9 @@ import CollapseItem from "./collapse/collapse-item";
 import Cascader from "./cascader/cascader";
 import Slides from "./slides/slides";
 import SlidesItem from "./slides/slides-item";
+import Nav from "./nav/nav";
+import NavItem from "./nav/nav-item";
+import SubNav from "./nav/sub-nav";
 // import CascaderPanel from "./cascader-panel";
 // import Carousel from "./carousel";
 // import CarouselItem from "./carousel-item";
@@ -52,6 +55,9 @@ Vue.component('g-collapse-item', CollapseItem)
 Vue.component('g-cascader', Cascader)
 Vue.component('g-slides', Slides)
 Vue.component('g-slides-item', SlidesItem)
+Vue.component('g-nav', Nav)
+Vue.component('g-nav-item', NavItem)
+Vue.component('g-sub-nav', SubNav)
 
 Vue.use(plugin)
 
@@ -59,7 +65,7 @@ new Vue({
     el: "#app",
     data() {
         return {
-            selected: 'haha'
+            selected: ['home'],
         }
     },
 });
