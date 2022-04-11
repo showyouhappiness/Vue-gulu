@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="更新组件官网">
+    <list default="true" id="c9f797f4-17fb-4eea-94cc-dc4faed32007" name="Default Changelist" comment="将scss代码 放入 styles文件夹">
+      <change afterPath="$PROJECT_DIR$/karma.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/button.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/col.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/collapse.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/frank.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/input.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/nav.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/popover.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/row.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/slides.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/tabs-body.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/tabs-head.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/tabs-item.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/tabs-pane.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/tabs.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/toast.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/uploader.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit/validate.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/toast-demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/toast-demo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/toast.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -62,7 +79,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindow拉取请求.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\l1477\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.7172.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -70,21 +87,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src" />
+      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\components" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\.vuepress\components" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src\button" />
-      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\components" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu" />
-      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\docs\theme" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src\slides" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src\layout" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src\grid" />
       <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src\collapse" />
-      <recent name="C:\Users\l1477\Desktop\studycode\Vue-gulu\src\cascader" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.deploy.sh">
+  <component name="RunManager" selected="Karma.col.test.js">
     <configuration name="Button" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
@@ -92,73 +109,62 @@
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
+      <test-file-path value="$PROJECT_DIR$/test/button.test.js" />
       <test-names>
         <test-name value="Button" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Button.可以设置position." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="Button.vue" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
+      <scope-kind value="SUITE" />
+      <test-file-path value="$PROJECT_DIR$/test/unit/button.spec.js" />
       <test-names>
-        <test-name value="Button" />
-        <test-name value="可以设置position." />
+        <test-name value="Button.vue" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Button.可以设置trigger." type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+    <configuration name="col.spec.js" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/test/popover.test.js" />
-      <test-names>
-        <test-name value="Button" />
-        <test-name value="可以设置trigger." />
-      </test-names>
+      <scope-kind value="TEST_FILE" />
+      <test-file-path value="$PROJECT_DIR$/test/unit/col.spec.js" />
       <method v="2" />
     </configuration>
-    <configuration name="deploy.sh" type="ShConfigurationType" temporary="true">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/deploy.sh" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+    <configuration name="col.test.js" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
       <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file-path value="$PROJECT_DIR$/test/col.test.js" />
       <method v="2" />
     </configuration>
-    <configuration name="docs:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="dev-test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="docs:build" />
+        <script value="dev-test" />
       </scripts>
       <node-interpreter value="project" />
-      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.docs:build" />
-        <item itemvalue="Shell Script.deploy.sh" />
+        <item itemvalue="Karma.col.test.js" />
         <item itemvalue="Karma.Button" />
-        <item itemvalue="Karma.Button.可以设置trigger." />
-        <item itemvalue="Karma.Button.可以设置position." />
+        <item itemvalue="Karma.col.spec.js" />
+        <item itemvalue="npm.dev-test" />
+        <item itemvalue="Karma.Button.vue" />
       </list>
     </recent_temporary>
   </component>
@@ -216,6 +222,7 @@
       <workItem from="1649298411083" duration="7746000" />
       <workItem from="1649402077656" duration="946000" />
       <workItem from="1649403069894" duration="5050000" />
+      <workItem from="1649639227603" duration="5372000" />
     </task>
     <task id="LOCAL-00001" summary="input add v-model">
       <created>1646918778744</created>
@@ -462,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649405294445</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="完成Nav功能 并将其添加到组件库中">
+      <created>1649499035580</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1649499035580</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +495,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="实现弹出框 上 中 下 功能" />
     <MESSAGE value="实现实现了只能有一个toast的功能" />
     <MESSAGE value="解决toast的一个bug 多次调用close()" />
     <MESSAGE value="弹出动画" />
@@ -506,7 +519,8 @@
     <MESSAGE value="将 cascader 与 slider 文档初步完成" />
     <MESSAGE value="更新组件官网" />
     <MESSAGE value="整理并分类" />
-    <option name="LAST_COMMIT_MESSAGE" value="整理并分类" />
+    <MESSAGE value="完成Nav功能 并将其添加到组件库中" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成Nav功能 并将其添加到组件库中" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
