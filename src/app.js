@@ -26,10 +26,7 @@ import SlidesItem from "./slides/slides-item";
 import Nav from "./nav/nav";
 import NavItem from "./nav/nav-item";
 import SubNav from "./nav/sub-nav";
-// import CascaderPanel from "./cascader-panel";
-// import Carousel from "./carousel";
-// import CarouselItem from "./carousel-item";
-// import BackTop from "./back-top";
+import Pager from "./pager";
 
 
 Vue.component('g-button', Button)
@@ -58,14 +55,14 @@ Vue.component('g-slides-item', SlidesItem)
 Vue.component('g-nav', Nav)
 Vue.component('g-nav-item', NavItem)
 Vue.component('g-sub-nav', SubNav)
+Vue.component('g-pager', Pager)
 
-Vue.use(plugin)
+// Vue.use(plugin)
 
 new Vue({
     el: "#app",
-    data() {
-        return {
-            selected: 'home',
-        }
+    data: {
+        currentPage: 10,
+        totalPage: 20,
     },
 });

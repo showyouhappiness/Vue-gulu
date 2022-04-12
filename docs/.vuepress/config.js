@@ -25,6 +25,7 @@ module.exports = {
                     '/components/slides',
                     '/components/cascader',
                     '/components/nav',
+                    '/components/pager',
                 ],
             }
 
