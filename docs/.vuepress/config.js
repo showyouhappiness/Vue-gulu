@@ -26,6 +26,7 @@ module.exports = {
                     '/components/cascader',
                     '/components/nav',
                     '/components/pager',
+                    '/components/sticky',
                 ],
             }
 
