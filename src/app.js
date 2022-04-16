@@ -73,53 +73,73 @@ new Vue({
                     field: 'name'
                 },
                 {
-                    text: '年龄',
-                    field: 'age'
+                    text: '分数',
+                    field: 'score'
                 }
             ],
+            orderBy: {  // 排序  只能确定是否排序，并不知道是升序还是降序
+                score: true
+            },
+            loading: false,
             dataSource: [
                 {
                     id: 1,
                     name: '张三',
-                    age: 20
+                    score: 20
                 },
                 {
                     id: 2,
                     name: '李四',
-                    age: 30
+                    score: 30
                 },
                 {
                     id: 3,
                     name: '王五',
-                    age: 40
+                    score: 40
                 },
                 {
                     id: 4,
                     name: '赵六',
-                    age: 50
+                    score: 50
                 },
                 {
                     id: 5,
                     name: '田七',
-                    age: 60
+                    score: 60
                 }
                 ,
                 {
                     id: 6,
                     name: '陈八',
-                    age: 70
+                    score: 70
                 },
                 {
                     id: 7,
                     name: '孙九',
-                    age: 80
+                    score: 80
                 },
                 {
                     id: 8,
                     name: '周十',
-                    age: 90
-                }
+                    score: 90
+                },
+
             ]
         }
     },
+    methods: {
+        edit(item) {
+            alert(item.name)
+        },
+        view(item) {
+            alert(item.name)
+        },
+        requestData() {
+            this.loading = true;
+            setTimeout(() => {
+                this.dataSource = this.dataSource.sort((a, b) => a.score - b.score)
+                this.loading = false;
+            }, 3000)
+        }
+    }
 });
