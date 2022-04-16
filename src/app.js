@@ -27,8 +27,8 @@ import Vue from 'vue';
 // import NavItem from "./nav/nav-item";
 // import SubNav from "./nav/sub-nav";
 // import Pager from "./pager";
-import Sticky from "./sticky";
-
+// import Sticky from "./sticky";
+import Table from './table/table';
 
 // Vue.component('g-button', Button)
 // Vue.component('g-icon', Icon)
@@ -57,7 +57,8 @@ import Sticky from "./sticky";
 // Vue.component('g-nav-item', NavItem)
 // Vue.component('g-sub-nav', SubNav)
 // Vue.component('g-pager', Pager)
-Vue.component('g-sticky', Sticky)
+// Vue.component('g-sticky', Sticky)
+Vue.component('g-table', Table)
 
 // Vue.use(plugin)
 
@@ -65,7 +66,60 @@ new Vue({
     el: "#app",
     data() {
         return {
-            distance: 20,
+            selected: [],
+            columns: [
+                {
+                    text: '姓名',
+                    field: 'name'
+                },
+                {
+                    text: '年龄',
+                    field: 'age'
+                }
+            ],
+            dataSource: [
+                {
+                    id: 1,
+                    name: '张三',
+                    age: 20
+                },
+                {
+                    id: 2,
+                    name: '李四',
+                    age: 30
+                },
+                {
+                    id: 3,
+                    name: '王五',
+                    age: 40
+                },
+                {
+                    id: 4,
+                    name: '赵六',
+                    age: 50
+                },
+                {
+                    id: 5,
+                    name: '田七',
+                    age: 60
+                }
+                ,
+                {
+                    id: 6,
+                    name: '陈八',
+                    age: 70
+                },
+                {
+                    id: 7,
+                    name: '孙九',
+                    age: 80
+                },
+                {
+                    id: 8,
+                    name: '周十',
+                    age: 90
+                }
+            ]
         }
     },
 });
