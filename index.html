@@ -35,12 +35,13 @@
     <div style="margin: 20px">
         <g-table :columns="columns" :data-source="dataSource" bordered :selected-items.sync="selected"
                  :order-by.sync="orderBy" @update:orderBy="requestData" :loading="loading" :height="400"
-                 expend-field="description" checkable></g-table>
+                 expend-field="description" checkable>
+            <template v-slot="xxx">
+                <button @click="edit(xxx.item)">编辑</button>
+                <button @click="view(xxx.item)">查看</button>
+            </template>
+        </g-table>
     </div>
-<!--    <template v-slot="xxx">-->
-<!--        <button @click="edit(xxx.item)">编辑</button>-->
-<!--        <button @click="view(xxx.item)">查看</button>-->
-<!--    </template>-->
 </div>
 <script src="src/app.js"></script>
 </body>

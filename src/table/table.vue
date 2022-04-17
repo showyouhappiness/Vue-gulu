@@ -12,8 +12,8 @@
             <div class="gulu-table-header">
               {{ column.text }}
               <span v-if="column.field in orderBy" class="gulu-table-sorter" @click="changeOrderBy(column.field)">
-                <g-icon name="asc" :class="{active: orderBy[column.field] === 'asc'}"/>
-                <g-icon name="desc" :class="{active: orderBy[column.field] === 'desc'}"/>
+                <g-icon name="asc" :class="{active: orderBy[column.field] === 'asc'}"></g-icon>
+                <g-icon name="desc" :class="{active: orderBy[column.field] === 'desc'}"></g-icon>
               </span>
             </div>
           </th>
@@ -155,6 +155,7 @@ export default {
     if (this.$scopedSlots.default) {
       let div = this.$refs.actions[0]
       let {width} = div.getBoundingClientRect()
+      console.log(width)
       let parent = div.parentNode
       let styles = getComputedStyle(parent)
       let paddingLeft = styles.getPropertyValue('padding-left')
@@ -306,16 +307,6 @@ $grey: darken($grey, 10%);
 
       &.active {
         fill: red;
-      }
-
-      &:first-child {
-        position: relative;
-        bottom: -1px;
-      }
-
-      &:nth-child(2) {
-        position: relative;
-        top: -1px;
       }
     }
   }

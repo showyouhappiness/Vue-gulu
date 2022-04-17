@@ -70,7 +70,8 @@ new Vue({
             columns: [
                 {
                     text: '姓名',
-                    field: 'name'
+                    field: 'name',
+                    width: 100
                 },
                 {
                     text: '分数',
@@ -78,7 +79,7 @@ new Vue({
                 }
             ],
             orderBy: {  // 排序  只能确定是否排序，并不知道是升序还是降序
-                score: true
+                score: 'asc'
             },
             loading: false,
             dataSource: [
